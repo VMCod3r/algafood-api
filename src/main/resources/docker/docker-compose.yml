@@ -1,0 +1,10 @@
+version: '4'
+services:
+  db:
+    image: "mariadb"
+    environment:
+      - MARIADB_ROOT_PASSWORD=root
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mariadb-data:/var/lib/mariadb/data
