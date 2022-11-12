@@ -14,7 +14,7 @@ import java.util.List;
 public class AtivacaoClienteService {
 
     @Autowired
-    @TipoDoNotificador(NivelUrgencia.URGENTE)
+    @TipoDoNotificador(NivelUrgencia.NORMAL)
     private Notificador notificador;
 
     public void ativar(Cliente cliente) {
@@ -25,7 +25,3 @@ public class AtivacaoClienteService {
     }
 
 }
-
-/**
- * DESAMBIGUAÇÃO CUSTOMIZADA
- */

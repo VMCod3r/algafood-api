@@ -4,25 +4,18 @@ import com.algaworks.algafood.di.modelo.Cliente;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
-@Profile("prod")
+@Profile("dev")
 @TipoDoNotificador(NivelUrgencia.NORMAL)
 @Component
-public class NotificadorEmail implements Notificador {
+public class NotificadorEmailMock implements Notificador {
 
-
-    public NotificadorEmail() {
-        System.out.println("Notificador Email PROD!");
+    public NotificadorEmailMock() {
+        System.out.println("Notificador Email MOCK!");
     }
 
     @Override
     public void notificar(Cliente cliente, String mensagem) {
-        System.out.printf("Notificando %s através do e-mail %s: %s\n",
+        System.out.printf("MOCK Notificando seria enviada para %s através do e-mail %s: %s\n",
                 cliente.getNome(), cliente.getEmail(), mensagem);
     }
 }
-
-/**
- * @Qualifier: idenficação do Bean, quando for utilizar este bean, utiliza-se a mesma anotação para identificar qual BEAN será instanceado.
- *
- * Criando Anotações.
- */
