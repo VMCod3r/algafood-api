@@ -11,13 +11,12 @@ import java.util.List;
 public class AtivacaoClienteService {
 
     @Autowired
-    private List<Notificador> notificadores; //Para Notificar com todos os notificadores disponíveis.
+    private Notificador notificador;
 
     public void ativar(Cliente cliente) {
         cliente.ativar();
 
-        //Neste Caso Notificados os Clientes com todos os Notificadores Disponiveis....
-        notificadores.forEach(notificador -> notificador.notificar(cliente, "Seu Cadastro no Sistema está Ativo!"));
+      notificador.notificar(cliente, "Seu Cadastro no Sistema está Ativo!");
 
     }
 
