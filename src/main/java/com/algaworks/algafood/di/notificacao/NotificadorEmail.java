@@ -1,10 +1,10 @@
 package com.algaworks.algafood.di.notificacao;
 
 import com.algaworks.algafood.di.modelo.Cliente;
-import org.springframework.context.annotation.Primary;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
-@Primary
+@Qualifier("normal")
 @Component
 public class NotificadorEmail implements Notificador {
 
@@ -16,5 +16,5 @@ public class NotificadorEmail implements Notificador {
 }
 
 /**
- * @Primary: Nesse Caso esse BEAN terá prioridade sobre todos os demais, ele será injetado.
+ * @Qualifier: idenficação do Bean, quando for utilizar este bean, utiliza-se a mesma anotação para identificar qual BEAN será instanceado.
  */
