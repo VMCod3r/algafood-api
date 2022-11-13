@@ -3,10 +3,7 @@ package com.algaworks.algafood.domain.model;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Data
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
@@ -20,6 +17,7 @@ public class Cozinha {
     private Long id;
 
     //    @Column(name = "nm_cozinha") //Quando necessário para um nome diferente do nome da coluna especificado no atributo
+    @Column(nullable = false)
     private String nome;
 
 }
