@@ -23,7 +23,7 @@ public class RestauranteRepositoryImpl implements RestauranteRepository {
         TypedQuery<Restaurante> query = manager.createQuery("select r from Restaurante r", Restaurante.class);
         return query.getResultList();
 
-//        return manager.createQuery("select c from Cozinha c", Cozinha.class).getResultList(); // mesmo Código em uma Linha
+//        return manager.createQuery("select r from Restaurante r", Restaurante.class).getResultList(); // mesmo Código em uma Linha
     }
 
     @Override
