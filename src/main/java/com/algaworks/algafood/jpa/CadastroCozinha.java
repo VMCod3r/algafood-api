@@ -33,4 +33,11 @@ public class CadastroCozinha {
     }
 
 
+    @Transactional
+    public void remover(Cozinha cozinha) {
+        cozinha = buscar(cozinha.getId());
+        manager.remove(cozinha);
+    }
+
+
 }
