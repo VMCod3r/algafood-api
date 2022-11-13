@@ -22,9 +22,14 @@ public class CadastroCozinha {
 //        return manager.createQuery("select c from Cozinha c", Cozinha.class).getResultList(); // mesmo Código em uma Linha
     }
 
+    public Cozinha buscar(Long id) {
+        return manager.find(Cozinha.class, id);
+    }
+
 
     @Transactional
     public Cozinha adicionar(Cozinha cozinha) {
        return manager.merge(cozinha);
     }
+
 }
